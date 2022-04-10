@@ -1,0 +1,56 @@
+#include<iostream>
+#include<stdlib.h>
+
+using namespace std;
+int main()
+{
+    system("colour 4A");
+    cout<<"enter the current time:"<<endl;
+    int hour;
+     int min;
+     int sec;
+     cout<<"enter the hour:"<<endl;
+     cin>>hour;
+     cout<<"enter the min:"<<endl;
+     cin>>min;
+     cout<<"enter the sec:"<<endl;
+     cin>>sec;
+     if(hour>24)
+     {
+         cout<<"you enter the wrong time:"<<endl;
+     }
+     else if(min>60)
+     {
+         cout<<"you enter the wrong time:"<<endl;
+     }
+     else if(sec>60)
+     {
+         cout<<"you enter the wrong time :"<<endl;
+     }
+      else{
+          while(1)
+          {
+              for(hour=0;hour<60;hour++)
+              {
+                  for(min=0;min<60;min++)
+                  {
+                      for(sec=0;sec<60;sec++)
+                   {
+                    cout<<"the current time is:"<<hour<<min<<sec<<endl;
+                  }
+                  int a;
+                     a=60*24*24;
+    
+              }
+              hour=0;
+          }
+          min=0;
+      }
+      sec=0;
+
+}
+system("pause");
+}
+
+     
+    
