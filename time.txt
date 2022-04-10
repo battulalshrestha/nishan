@@ -1,0 +1,52 @@
+// friend function 
+// member fxn and constructor in time 
+#include<iostream>
+using namespace std;
+class duration
+{
+    private:
+    int hr;
+    int min;
+    int sec;
+    public:
+     duration()
+     {
+         hr=0;
+         min=0;
+         sec=0;
+     }
+     duration(int x,int y,int z)
+     {
+         hr=x;
+         min=y;
+         sec=z;
+     }
+     void display()
+     {
+         cout<<" the hour is:"<<hr<<endl;
+         cout<<"the min is:"<<min<<endl;
+         cout<<"the second is:"<<sec<<endl;
+     }
+     friend  void add(duration T1,duration T2);
+};
+    friend void duration:: add(duration T1,duration T2)
+{
+    duration S;
+    S.sec=T1.sec+T2.sec;
+    S.min=T1.min=T2.min+S.sec/60;
+    S.hr=T1.hr+T2.hr+S.min/60;
+    S.sec=S.sec%60;
+    S.min=S.min%60;
+    return (S);
+}
+int main(){
+    duration S2;
+    duration T1(4,45,50);
+    duration T2(3,30,25);
+    T1.display();
+    T2.display();
+    S2.add(T1,T2);
+    S2.display();
+    return 0;
+    
+}
